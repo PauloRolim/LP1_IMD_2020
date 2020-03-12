@@ -67,7 +67,7 @@ Turma::Turma():
 Turma::~Turma(){
 
 //	for (int i = 0; i < lotacao; i++){
-		delete participantes[] ;
+		delete [] participantes;
 //	}
 
 	cout << "Objetos Destruídos!" << endl;
