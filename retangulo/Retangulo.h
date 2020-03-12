@@ -20,6 +20,3 @@ public:
 };
 
 
-int Retangulo::getTotal(){
-    return total;
-}

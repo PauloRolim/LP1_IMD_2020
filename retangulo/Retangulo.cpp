@@ -1,19 +1,19 @@
+#include <iostream>
 #include "Retangulo.h"
 
-
-Retangulo::getAltura(){
+int Retangulo::getAltura(){
     return altura;
 }
 
-Retangulo::getLargura(){
+int Retangulo::getLargura(){
     return largura;
 }
 
-Retangulo::setAltura(int a){
+void Retangulo::setAltura(int a){
     altura = a;
 }
 
-Retangulo::setLargura(int l){
+void Retangulo::setLargura(int l){
     largura = l;
 }
 
@@ -25,4 +25,11 @@ Retangulo::Retangulo(int l, int a):
 
 Retangulo::~Retangulo()
 {
+    std::cout << "Adeus mundo cruel!!";
+    total--;
+}
+
+int Retangulo::getTotal()
+{
+    return total;
 }

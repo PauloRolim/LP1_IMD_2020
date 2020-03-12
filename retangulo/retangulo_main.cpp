@@ -7,7 +7,11 @@ int main(){
 
     Retangulo r(10,5);
 
-    std::cout << "Largura= "
+    std::cout << "Largura= " << r.getLargura() << std::endl;
+    std::cout << "Altura= " << r.getAltura();
+
+    std::cout << "numero de instancias" << std::endl;
+    std::cout << Retangulo::getTotal();
 
     return 0;
 }
