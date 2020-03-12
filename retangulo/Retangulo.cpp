@@ -1,6 +1,18 @@
 #include <iostream>
 #include "Retangulo.h"
 
+Retangulo::Retangulo(int l, int a): 
+    largura(l), altura(a)
+    {
+    total++;
+}
+
+Retangulo::~Retangulo()
+{
+    std::cout << "Adeus mundo cruel!!";
+    total--;
+}
+
 int Retangulo::getAltura(){
     return altura;
 }
@@ -15,18 +27,6 @@ void Retangulo::setAltura(int a){
 
 void Retangulo::setLargura(int l){
     largura = l;
-}
-
-Retangulo::Retangulo(int l, int a): 
-    largura(l), altura(a)
-{
-    total++;
-}
-
-Retangulo::~Retangulo()
-{
-    std::cout << "Adeus mundo cruel!!";
-    total--;
 }
 
 int Retangulo::getTotal()

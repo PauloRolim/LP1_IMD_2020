@@ -1,3 +1,5 @@
+#include <iostream>
+
 class Retangulo
 {
 private:
@@ -9,6 +11,7 @@ public:
     static int total;
     static int getTotal();
     ~Retangulo();
+    Retangulo();
 
     //getters
     int getAltura();
