@@ -30,4 +30,5 @@ void Sapo::setQuantidade_pulos_dados(int var_pulos){
 
 int Sapo::pular(){
   distancia_percorrida = rand() % 10;
+  return distancia_percorrida;
 }
