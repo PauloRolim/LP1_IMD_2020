@@ -1,0 +1,27 @@
+
+O que são o std::cin e std::cout?
+
+O "standard input stream" ou "cin" é um objeto da classe "iostream", serve como entrada de dados padrão das aplicações. 
+Esse fluxo de dados pode ser recebido de uma fonte externa como teclado ou um arquivo. Como um dos objetos da classe "iostream"
+os dados formatados podem ser gravados nele utilizando o operador lógico de extração ">>", ou como dados não 
+formatados utilizando a função "read".
+
+O "standard output stream" ou "cout" é um objeto da classe "iostream", e serve como destino padrão de 
+carateres do ambiente, podendo ser compartilhado com mais objetos. Como um dos objetos da classe "iostream"
+os dados formatados podem ser gravados nele utilizando o operador lógico de inserção "<<", ou como dados não
+formatados utilizando a função "write".
+
+Qual a função do 'return 0' do método main?
+
+Serve para informar ao compilador que a função "main" foi executada com sucesso. Caso o retorno seja outro o 
+compilador irá informar que houve um erro.
+
+O que são o int argc, e o char* argv[]?
+
+"argc" é um valor inteiro que indica a quantidade de argumentos que foram passados ao chamar o programa.
+
+"argv" é um vetor de char que contém os argumentos, cada argumento representa uma string passada na linha 
+de comando. Os argumentos passados por linha de comando devem ser separados por um espaço ou tabulação.
+
+
+
