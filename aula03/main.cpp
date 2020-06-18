@@ -2,7 +2,9 @@
 #include <string>
 #include <fstream>
 
-void show_usage(const std::string &programa);
+void show_usage(const std::string &programa){
+     std::cout << "Uso: " << programa << " add <mensagem>" << std::endl;
+};
 
 int main (int argc, char *argv[]){
 
@@ -30,8 +32,8 @@ int main (int argc, char *argv[]){
         mensagem = argv[2];
     }
 
-    if(arquivo_saida.fail()){ //tratamento de possível erro
-        std::cerr << "Arquivo de destino não localizado!" << std::endl; //mensagem de erro
+    if(arquivo_saida.fail()){
+        std::cerr << "Arquivo de destino não localizado!" << std::endl;
         return 1;
     }
 
@@ -41,9 +43,5 @@ int main (int argc, char *argv[]){
 
     std::cout << "Mensagem Adicionada!" << std::endl;
     
-    void show_usage(const std::string &programa) {
-        std::cout << "Uso: " << programa << " add <mensagem>" << std::endl;
-    }
-
     return 0;
 }
