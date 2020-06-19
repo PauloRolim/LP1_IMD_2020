@@ -1,6 +1,21 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <ctime>
+
+std::string format_current_date(const std::string &format)
+{
+    std::time_t time = std::time(nullptr);
+    char result[1024];
+
+    std::strftime(result, sizeof(result), format.c_str(), std::localtime(&time));
+
+    return std::string(result);
+}
+
+std::string get_current_date() { return format_current_date("%d/%m/%Y"); }
+
+std::string get_current_time() { return format_current_date("%H:%M:%S"); }
 
 void show_usage(const std::string &programa)
 {
@@ -21,8 +36,8 @@ void list()
         std::getline(file, message);
 
         if (message.size() == 0)
-        {             //essa função mede o tamanho dos caracteres da linha em bytes
-            continue; //serve para testar se há algum conteúdo na linha
+        {             // essa função mede o tamanho dos caracteres da linha em bytes
+            continue; // e testa se há algum conteúdo na linha
         }
 
         std::cout << line_number << ". " << message << std::endl;
@@ -72,6 +87,9 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    arquivo_saida << "# " << get_current_date() << std::endl; // falta verificar se ja existe essa data
+
+    arquivo_saida << "- " << get_current_time() << " ";
     arquivo_saida << mensagem << std::endl;
 
     std::cout << "Mensagem Adicionada!" << std::endl;
