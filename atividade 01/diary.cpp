@@ -87,12 +87,30 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    arquivo_saida << "# " << get_current_date() << std::endl; // falta verificar se ja existe essa data
+    //arquivo_saida << "# " << get_current_date() << std::endl; // falta verificar se ja existe essa data
+    //arquivo_saida << std::endl;
+
+    std::cout << "Mensagem Adicionada!" << std::endl;
+
+    std::string teste;
+    const std::string parametro = "#";
+
+    std::fstream file("mensagem.txt", std::ios::in | std::ios::out | std::ios::app);
+
+    while (!file.eof())
+    {
+        std::getline(file, teste);
+
+        if (teste == parametro)
+        {
+            file << "# " << get_current_date() << std::endl;
+            file << std::endl;
+            break;
+        }
+    }
 
     arquivo_saida << "- " << get_current_time() << " ";
     arquivo_saida << mensagem << std::endl;
-
-    std::cout << "Mensagem Adicionada!" << std::endl;
 
     return 0;
 }
