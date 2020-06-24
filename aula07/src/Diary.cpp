@@ -1,5 +1,6 @@
 #include "Diary.h"
 #include <string>
+#include <iostream>
 
 Diary::Diary(const std::string& nome_arquivo){
 
@@ -19,6 +20,8 @@ void Diary::add(const std::string& mensagem){
 
     this -> mensagens[this->mensagem_tamanho] = m1;
     this -> mensagem_tamanho +=1;
+
+    std::cout << mensagens[this->mensagem_tamanho].conteudo << " | " << mensagem_tamanho << std::endl;
 
 }
 
