@@ -2,26 +2,34 @@
 #include <string>
 #include <iostream>
 
-Diary::Diary(const std::string& nome_arquivo){
+Diary::Diary(const std::string& nome_arquivo) :
+    mensagem_capacidade(10),
+    mensagem_tamanho(0),
+    nome_arquivo(nome_arquivo),
+    mensagens(nullptr)
 
-    this -> mensagem_capacidade = 10;
-    this -> mensagem_tamanho = 0;
-    this -> nome_arquivo = nome_arquivo;
-    this -> mensagens = nullptr;
-
+{
     mensagens = new Mensagem[mensagem_capacidade]; //alocação dinâmica de mensagens
+    std::cout << "OK" << std::endl;
+}
+
+Diary::~Diary(){
+    delete[] mensagens;
 }
 
 void Diary::add(const std::string& mensagem){
 
-    Mensagem m1; //variavel de inicialização
-
+    if (mensagem_tamanho >= mensagem_capacidade)
+    {
+        return;
+    }
+    
+    Mensagem m1; 
     m1.conteudo = mensagem;
+    mensagens[mensagem_tamanho] = m1;
+    mensagem_tamanho +=1;
 
-    this -> mensagens[this->mensagem_tamanho] = m1;
-    this -> mensagem_tamanho +=1;
-
-    std::cout << mensagens[this->mensagem_tamanho].conteudo << " | " << mensagem_tamanho << std::endl;
+    std::cout << mensagens[mensagem_tamanho].conteudo << " | " << mensagem_tamanho << std::endl;
 
 }
 

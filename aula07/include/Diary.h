@@ -7,6 +7,7 @@
 struct Diary
 {
     Diary(const std::string &nome_arquivo);
+    ~Diary();
 
     std::string nome_arquivo;
     Mensagem *mensagens;

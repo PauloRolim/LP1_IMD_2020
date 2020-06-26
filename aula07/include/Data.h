@@ -1,5 +1,5 @@
-#ifndef TEMPO_H
-#define TEMPO_H
+#ifndef DATA_H
+#define DATA_H
 
 #include <string>
 
