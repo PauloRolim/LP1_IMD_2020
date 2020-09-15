@@ -13,6 +13,7 @@ private:
 	string contato1;
 	string endereco;
 	string nome;
+	string cpf;
 public:
 	string getMatricula();
 	void setMatricula(string var_matricula);
