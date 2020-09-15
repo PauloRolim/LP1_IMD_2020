@@ -1,4 +1,4 @@
-#include "aluno.h"
+#include "aluno.hpp"
 using namespace std;
 
 string Aluno::getMatricula()
@@ -41,6 +41,14 @@ void Aluno::setNome(string var_nome){
 	nome = var_nome;
 
 }
+
+string Aluno::getCpf(){
+	return cpf;
+}
+void Aluno::setCpf(string var_cpf){
+	cpf = var_cpf;
+}
+
 // Aluno::Aluno(){
 // 	matricula = "";
 // 	idade = 0;
@@ -56,7 +64,7 @@ void Aluno::setNome(string var_nome){
 // 	nome = nome1;	
 // }
 
-Aluno::Aluno(string mat, short idade1,string c1,string endereco1,string nome1):
+Aluno::Aluno(string mat, short idade1,string c1,string endereco1,string nome1,string cpf):
 	matricula(mat), idade(idade1), contato1(c1), endereco(endereco1), nome(nome1){}
 
 Aluno::Aluno():

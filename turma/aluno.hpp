@@ -14,6 +14,7 @@ private:
 	string endereco;
 	string nome;
 	string cpf;
+	
 public:
 	string getMatricula();
 	void setMatricula(string var_matricula);
@@ -30,8 +31,11 @@ public:
 	string getNome();
 	void setNome(string var_nome);
 
+	string getCpf();
+	void setCpf(string var_cpf);
+
 	Aluno();
-	Aluno(string mat, short idade1,string c1,string endereco1,string nome1);
+	Aluno(string mat, short idade1,string c1,string endereco1,string nome1,string var_cpf);
 	
 };
 #endif

@@ -2,7 +2,7 @@
 #define SCHOOL_CLASS_H
 
 #include <iostream>
-#include "aluno.h"
+#include "aluno.hpp"
 
 using namespace std;
 
