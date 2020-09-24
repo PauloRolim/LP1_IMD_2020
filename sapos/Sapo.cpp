@@ -1,8 +1,17 @@
-#include "Sapo.h"
+#include "Sapo.hpp"
 #include <iostream>
 #include <cstdlib>
 
 using namespace std;
+
+
+Sapo::Sapo(){
+  this->identificador = identificador;
+  this->distancia_percorrida = distancia_percorrida;
+  this->quantidade_pulos_dados = quantidade_pulos_dados;
+}
+
+
 
 int Sapo::getIdendificador(){
   return identificador;
@@ -29,6 +38,8 @@ void Sapo::setQuantidade_pulos_dados(int var_pulos){
 }
 
 int Sapo::pular(){
-  distancia_percorrida = rand() % 10;
+  int pulo = rand () % 10;
+  distancia_percorrida = distancia_percorrida + pulo;
+  quantidade_pulos_dados++;
   return distancia_percorrida;
 }

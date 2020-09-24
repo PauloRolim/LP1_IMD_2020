@@ -1,5 +1,5 @@
-#ifndef_SAPO_H_
-#define_SAPO_H_
+#ifndef SAPO_H_
+#define SAPO_H_
 
 #include <cstdlib>
 
@@ -7,10 +7,17 @@ class Sapo{
   private:
 
     int identificador;
-    int distancia_percorrida;
+    int distancia_percorrida = 0;
     int quantidade_pulos_dados;
 
   public:
+  //Construtores
+  Sapo();
+  Sapo(int identificador, int distancia_percorrida, int quantidade_pulos_dados);
+
+  //Destrutor
+  ~Sapo();
+
 
   //getters
     int getIdendificador();
