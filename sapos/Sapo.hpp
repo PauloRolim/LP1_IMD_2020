@@ -13,7 +13,8 @@ class Sapo{
   public:
   //Construtores
   Sapo();
-  Sapo(int identificador, int distancia_percorrida, int quantidade_pulos_dados);
+  Sapo(int identificador, int distancia_percorrida, 
+  int quantidade_pulos_dados);
 
   //Destrutor
   ~Sapo();
@@ -26,9 +27,9 @@ class Sapo{
 
   //setters
 
-    void setIdentificador(int var_ident);
-    void setDistancia_percorrida(int var_distancia);
-    void setQuantidade_pulos_dados(int var_pulos);
+    void setIdentificador(int identificador);
+    void setDistancia_percorrida(int distancia_percorrida);
+    void setQuantidade_pulos_dados(int quantidade_pulos_dados);
   
   //Método pular
 
