@@ -1,5 +1,9 @@
 #include "sapo.hpp"
 
+Sapo::Sapo(){
+    
+}
+
 Sapo::Sapo(std::string id, int max_pulo):id(id),max_pulo(max_pulo),rd(),gen(rd()),
 dis(1,max_pulo){
     this->distancia = 0;

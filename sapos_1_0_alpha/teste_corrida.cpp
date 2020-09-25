@@ -9,6 +9,7 @@ int main(int argc, char const *argv[]) {
     Sapo* s4 = new Sapo("Hamilton",14);
 
     Corrida gpbrasil ("Grande Premio de Interlagos", 100);
+    
     gpbrasil.addSapo(s1);
     gpbrasil.addSapo(s2);
     gpbrasil.addSapo(s3);

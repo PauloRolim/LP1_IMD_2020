@@ -17,6 +17,7 @@ private:
     std::uniform_int_distribution<>dis;
 
 public:
+    Sapo();
     Sapo(std::string id, int max_pulo);
     ~Sapo();
     std::string getId();
