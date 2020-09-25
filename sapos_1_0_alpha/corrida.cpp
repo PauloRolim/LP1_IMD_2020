@@ -30,28 +30,29 @@ void Corrida::remSapo(std::string id){
     
 }
 
-void Corrida::setFinal(bool var_final){
-    final = var_final;
-};
-
-bool Corrida::getFinal(){
-    return this-> final;
-}
-
-void Corrida::run(){
-
-    int contador = 0;
-    Sapo* vencedor = new Sapo;
+void Corrida::run() //Essa função é responsável por rodar a corrida
+{
     
-    while (sapos[contador]->getDistancia() >= distancia_corrida)
+    int i = 0; // variável usada como contador no for
+    bool final = false; // variável usada para entrar e sair do laço while
+
+    while (final == false)
     {
-        sapos[contador]->pular();
-        std::cout << "O sapo " << sapos[contador]->getId() << " percorreu a distância: "
-        << sapos[contador]->getDistancia() << std::endl;
-        contador++;
-    }
+        for (i = 0; i < 3; i++) // Esse for repete os pulos entes os três sapos corredores
+        {
+            sapos[i]->pular(); //faz os sapos pularem distâncias randômicas de acordo com o MAX_PULO
+            std::cout << "O sapo " << sapos[i]->getId() << " percorreu a distância: "
+            << sapos[i]->getDistancia() << std::endl;
 
-    vencedor = sapos[contador];
-    std::cout << "O vencedor foi " << vencedor->getId() << std::endl;
-    
+            if (sapos[i]->getDistancia() >= Corrida::getDistancia_corrida()) // aqui é testado a condição de parada do laço while
+            {
+                final = true;
+                std::cout << "`;." << "O vencedor é: " << sapos[i]->getId() << ".;´ " << std::endl;
+                break;
+            }
+            
+        }
+        
+    }
+        
 }

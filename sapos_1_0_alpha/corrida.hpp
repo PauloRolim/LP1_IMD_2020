@@ -10,7 +10,7 @@ private:
     Sapo* sapos[MAX_SAPOS];
     int concorrentes;
     int distancia_corrida;
-    bool final;
+    
 public:
     Corrida(std::string titulo, int distancia_corrida);
     ~Corrida();
@@ -20,8 +20,7 @@ public:
     void addSapo(Sapo* novo);
     void remSapo(std::string id);
     void run();
-    void setFinal(bool var_final);
-    bool getFinal();
+    
 };
 
 
