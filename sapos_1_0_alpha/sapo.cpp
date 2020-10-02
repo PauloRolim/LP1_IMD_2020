@@ -1,7 +1,7 @@
 #include "sapo.hpp"
 
 Sapo::Sapo(){
-    
+
 }
 
 Sapo::Sapo(std::string id, int max_pulo):id(id),max_pulo(max_pulo),rd(),gen(rd()),
