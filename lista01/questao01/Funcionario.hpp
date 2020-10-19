@@ -1,3 +1,6 @@
+#ifndef _FUNCIONARIO_
+#define _FUNCIONARIO_
+
 #include <string>
 
 class Funcionario
@@ -9,8 +12,7 @@ private:
 
 
 public:
-    Funcionario();
-    Funcionario(std::string nome, float salario, std::string data_admissao);
+    
     ~Funcionario();
     std::string getNome();
     float getSalario();
@@ -19,3 +21,4 @@ public:
     void setSalario(float var_salario);
     void setData_admissao(std::string var_data_admissao);
 };
+#endif

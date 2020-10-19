@@ -2,10 +2,6 @@
 #include <string>
 #include <iostream>
 
-Funcionario::Funcionario(std::string nome, float salario, std::string data_admissao):nome(nome), salario(salario),
-data_admissao(data_admissao){
-
-}
 
 Funcionario::~Funcionario(){
     std::cout << "Fui demitido" << std::endl;
